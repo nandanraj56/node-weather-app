@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit',(event)=>{
     const inputAddress = document.getElementsByName('address')[0].value;
     console.log(inputAddress)
 
-    fetch('http://localhost:3000/weather?address='+inputAddress).then((response)=>{
+    fetch('/weather?address='+inputAddress).then((response)=>{
     response.json().then((data)=>{
         //console.log(data);
         if(data.error){
